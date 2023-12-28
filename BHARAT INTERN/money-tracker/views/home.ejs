@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Money Tracker</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>Money Tracker</h1>
+  <a href="/add">Add Transaction</a>
+  <table>
+    <tr>
+      <th>Description</th>
+      <th>Amount</th>
+      <th>Type</th>
+    </tr>
+    <% transactions.forEach(transaction => { %>
+      <tr>
+        <td><%= transaction.description %></td>
+        <td><%= transaction.amount %></td>
+        <td><%= transaction.type %></td>
+      </tr>
+    <% }); %>
+  </table>
+</body>
+</html>
